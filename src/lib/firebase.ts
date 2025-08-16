@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-NV9YJL0VKG",
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp(); //「!」もしデータが(length)存在していたらfirebasの情報を初期化　getAppは既に存在するデータを返す→初期化されていない場合に呼ぶとエラーになる
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp(); //「!」もしデータが(length)存在していたらfirebasの情報を初期化　getAppは既に存在するデータを返す→初期化されていない場合に呼ぶとエラーになる。
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
