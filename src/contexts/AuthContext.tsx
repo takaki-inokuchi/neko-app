@@ -1,3 +1,4 @@
+"use client";
 import { loginWithGoogle, logout } from "@/lib/auth";
 import { auth } from "@/lib/firebase";
 import { onAuthStateChanged, User } from "firebase/auth";
