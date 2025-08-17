@@ -1,6 +1,7 @@
 import { AuthProvider } from "@/contexts/AuthContext";
+import RedirectHandler from "./redirect-handler";
 
-AuthProvider
+AuthProvider;
 export default function RootLayout({
   children,
 }: {
@@ -9,7 +10,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <RedirectHandler />
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
